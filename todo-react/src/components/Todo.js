@@ -6,18 +6,7 @@ const Todo = ({ text, todo, todos, setTodos}) => {
         setTodos(todos.filter((el) => el.id !== todos.id));
         
     };
-    // const completeHandler = () => {
-    //     setTodos(todos.map((item) => {
-    //         if(item.id === todo.id){
-    //           return {
-    //               ...item, completed: !item.completed
-    //           };
-    //         }  
-    //           return item;
-    //         }
-            
-    //     });
-    // }
+    
 
     const completeHandler =() => {
         setTodos(todos.map((item) => {
