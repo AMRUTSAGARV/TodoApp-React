@@ -10,15 +10,22 @@ const Form = ({setInputText, todos, setTodos, inputText}) => {     //   OR  funt
 const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
-        ...todos, {text: inputText, completed: false, id:Math.random() *1000}
-    ])
+        ...todos, 
+        { text: inputText, completed: false, id: Math.random() * 1000},
+    ]);
+    setInputText("");
 
-}
+};
 
     return (
         <form>
-      <input value= {inputText} onChange={inputTextHandler} type="text" className="todo-input" />
-      <button onClick ={submitTodoHandler} className="todo-button" type="submit">
+      <input 
+      value={inputText} 
+      onChange={inputTextHandler} 
+      type="text" 
+      className="todo-input" 
+      />
+      <button onClick={submitTodoHandler} className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
       <div className="select">
